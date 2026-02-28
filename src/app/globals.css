@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #FFF8F0;
+  --color-card: #FFFDF8;
+  --color-text: #4A3728;
+  --color-text-sub: #8B7B6B;
+  --color-accent-coral: #D4816B;
+  --color-accent-wisteria: #B8A9C9;
+  --color-accent-sage: #A8BF93;
+  --color-accent-gold: #E8C87A;
+  --color-btn: #E8D4C0;
+  --color-outline: #6B4A3B;
+  --color-bubble-kon: #FFF0EE;
+  --color-bubble-pon: #F0EFF8;
+  --font-maru: "Zen Maru Gothic", sans-serif;
+  --font-mincho: "Shippori Mincho", serif;
+}
+
+body {
+  background: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(184, 169, 201, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 129, 107, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(168, 191, 147, 0.06) 0%, transparent 50%);
+  color: var(--color-text);
+  font-family: var(--font-maru);
+  overflow-x: hidden;
+}
+
+/* Cute floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gentle pulse for buttons */
+@keyframes cute-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 129, 107, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(212, 129, 107, 0); }
+}
+
+.animate-cute-pulse {
+  animation: cute-pulse 2s ease-in-out infinite;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* Decorative dot divider */
+.dot-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.dot-divider::before,
+.dot-divider::after {
+  content: "・ ・ ・";
+  font-size: 0.75rem;
+  color: var(--color-accent-coral);
+  opacity: 0.5;
+}
+
+/* Cute card styling */
+.cute-card {
+  background: var(--color-card);
+  border: 2px solid rgba(107, 74, 59, 0.1);
+  border-radius: 1.5rem;
+  box-shadow:
+    0 4px 20px rgba(212, 129, 107, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+.cute-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(212,129,107,0.2), rgba(184,169,201,0.2), rgba(168,191,147,0.2));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Chat bubble tail */
+.bubble-tail-left {
+  position: relative;
+}
+.bubble-tail-left::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-bubble-kon);
+  border-left: 1px solid rgba(107, 74, 59, 0.2);
+  border-bottom: 1px solid rgba(107, 74, 59, 0.2);
+  transform: rotate(45deg);
+  border-radius: 0 0 0 4px;
+}
+
+.bubble-tail-right {
+  position: relative;
+}
+.bubble-tail-right::before {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-bubble-pon);
+  border-right: 1px solid rgba(107, 74, 59, 0.2);
+  border-top: 1px solid rgba(107, 74, 59, 0.2);
+  transform: rotate(45deg);
+  border-radius: 0 4px 0 0;
+}
+
+/* Sakura Petals */
+@keyframes sakura-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) translateX(80px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sakura-sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+.sakura-petal {
+  position: fixed;
+  top: -20px;
+  pointer-events: none;
+  z-index: 0;
+  animation: sakura-fall linear forwards, sakura-sway ease-in-out infinite;
+}
+
+/* Shake animation for omikuji */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-8deg); }
+  20% { transform: rotate(8deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(8deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(4deg); }
+  70% { transform: rotate(-2deg); }
+  80% { transform: rotate(2deg); }
+  90% { transform: rotate(0deg); }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out infinite;
+}
+
+/* Fortune level text styling */
+.fortune-level {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-btn);
+  border-radius: 3px;
+}

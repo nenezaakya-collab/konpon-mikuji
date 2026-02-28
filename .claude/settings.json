@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm uninstall html2canvas)",
+      "Bash(npm install html-to-image)",
+      "Bash(lsof -i :3002 -t)",
+      "Bash(xargs kill)",
+      "Bash(lsof -i :3000 -t)",
+      "Bash(md5 /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/top.png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/Images/title.png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/Images/konpon-default.png)",
+      "Bash(npm uninstall html-to-image)",
+      "Bash(npm install html2canvas)",
+      "Bash(sips -g all /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/konpon-default.png)",
+      "Bash(sips -z 630 630 --cropToHeightWidth 630 1200 --padToHeightWidth 630 1200 --padColor FFF8F0 -s format png public/assets/konpon-default.png --out /tmp/ogp-temp.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/ogp-temp.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png)",
+      "Bash(sips -z 192 192 -s format png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png --out /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/icons/icon-192.png)",
+      "Bash(sips -z 512 512 -s format png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png --out /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/icons/icon-512.png)",
+      "Bash(git add -A)"
+    ]
+  }
+}
