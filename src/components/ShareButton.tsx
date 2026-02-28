@@ -30,10 +30,12 @@ export default function ShareButton({
     }
   }, [shareRef, saving]);
 
+  const siteUrl = "https://kon-pon-mikuji.vercel.app";
+
   const shareText =
     lang === "ja"
-      ? `今日のコンポンみくじは「${fortuneLabel}」でした！`
-      : `My Konpon Mikuji fortune today: "${fortuneLabel}"!`;
+      ? `今日のコンポンみくじは「${fortuneLabel}」でした！\n${siteUrl}`
+      : `My Konpon Mikuji fortune today: "${fortuneLabel}"!\n${siteUrl}`;
 
   const hashtag = lang === "ja" ? "コンポンみくじ" : "KonponMikuji";
 
