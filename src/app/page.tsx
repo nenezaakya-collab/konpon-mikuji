@@ -58,6 +58,11 @@ export default function Home() {
       <SakuraPetals intensity={sakuraIntensity} />
       {screen === "result" && result?.level === "daikichi" && <Confetti />}
       <LangToggle lang={lang} onToggle={toggleLang} />
+      <footer className="fixed bottom-0 inset-x-0 z-10 py-3 text-center text-[10px] text-sub/60 flex items-center justify-center gap-3">
+        <span>&copy; 2026</span>
+        <span>·</span>
+        <a href="https://kanacle.com" target="_blank" rel="noopener noreferrer" className="hover:text-sub transition-colors">kanacle.com</a>
+      </footer>
       <AnimatePresence mode="wait">
         {screen === "top" && (
           <TopScreen
