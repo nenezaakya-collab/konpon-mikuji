@@ -15,7 +15,41 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png)",
       "Bash(sips -z 192 192 -s format png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png --out /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/icons/icon-192.png)",
       "Bash(sips -z 512 512 -s format png /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets/kon-icon.png --out /Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/icons/icon-512.png)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(gh repo create konpon-mikuji --public --source=. --push --description \"コンポンみくじ — きつねとたぬきの毎日おみくじ\")",
+      "Bash(npx vercel --version)",
+      "Bash(git push)",
+      "Bash(npx vercel ls)",
+      "Bash(npx vercel --prod)",
+      "Bash(npx create-next-app@latest fortune-portal --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --turbopack)",
+      "Bash(npm install framer-motion)",
+      "Bash(lsof -i :3000)",
+      "Read(//proc/75114/**)",
+      "Bash(lsof -i :3001 -i :3002 -i :3003)",
+      "Bash(lsof -i :3004 -i :3005)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3004)",
+      "Bash(ls /Users/kimurakanashi/Desktop/play-ground/hoshi-no-supli/.env*)",
+      "WebFetch(domain:konpon.kanacle.com)",
+      "Bash(git push origin main --force-with-lease)",
+      "Bash(lsof -ti :3004)",
+      "Bash(npx next dev -p 3004)",
+      "Bash(curl -s http://localhost:3004/api/horoscope/gemini?type=daily)",
+      "Bash(lsof -i :3004)",
+      "Bash(curl -s -m 10 'http://localhost:3004/api/horoscope/gemini?type=daily')",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(curl -s -m 10 -o /dev/null -w \"%{http_code}\" 'http://localhost:3004/gemini')",
+      "Bash(openssl rand -hex 32)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''id:'', d.get\\(''id'',''?''\\)\\)\")",
+      "Bash(find /Users/kimurakanashi/Desktop/play-ground/hoshi-no-supli/src -name \"* 2*\" -exec rm -rf {} +)",
+      "Bash(git reset)",
+      "Bash(git status --short -u)"
+    ],
+    "additionalDirectories": [
+      "/Users/kimurakanashi/Desktop/play-ground/kon-pon-mikuji/public/assets",
+      "/Users/kimurakanashi/Desktop/play-ground/portfolio",
+      "/Users/kimurakanashi/Desktop/play-ground/fortune-portal/src/components",
+      "/Users/kimurakanashi/Desktop/play-ground/hoshi-no-supli",
+      "/Users/kimurakanashi/Desktop/play-ground/kanacle"
     ]
   }
 }

@@ -36,6 +36,19 @@ yarn-error.log*
 # vercel
 .vercel
 
+# default Next.js assets (unused)
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
+
+# service worker
+public/sw.js
+
+# claude
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
