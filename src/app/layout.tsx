@@ -56,10 +56,33 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-maru)" }}
       >
         {children}
-        <footer className="fixed bottom-0 inset-x-0 py-3 text-center text-[10px] text-text-sub/60 flex items-center justify-center gap-3" style={{ zIndex: 9999 }}>
+        <footer
+          style={{
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 9999,
+            padding: "10px 0",
+            textAlign: "center",
+            fontSize: "11px",
+            color: "#8B7B6B",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+          }}
+        >
           <span>&copy; 2026</span>
           <span>&middot;</span>
-          <a href="https://kanacle.com" target="_blank" rel="noopener noreferrer" className="hover:text-text-sub transition-colors">kanacle.com</a>
+          <a
+            href="https://kanacle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#8B7B6B", textDecoration: "none" }}
+          >
+            kanacle.com
+          </a>
         </footer>
       </body>
     </html>
