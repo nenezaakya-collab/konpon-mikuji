@@ -17,7 +17,7 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://konpon-mikuji.vercel.app"),
+  metadataBase: new URL("https://konpon.kanacle.com"),
   title: "コンポンみくじ — きつねとたぬきの毎日おみくじ",
   description:
     "きつねのコンとたぬきのポンが毎日の運勢を届けます。和菓子カラーのゆるかわドット絵おみくじアプリ。",
@@ -56,30 +56,14 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-maru)" }}
       >
         {children}
-        <footer
-          style={{
-            position: "fixed",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            zIndex: 9999,
-            padding: "10px 0",
-            textAlign: "center",
-            fontSize: "11px",
-            color: "#8B7B6B",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "8px",
-          }}
-        >
+        <footer className="fixed bottom-0 inset-x-0 z-[9999] py-2.5 text-center text-[11px] text-text-sub flex items-center justify-center gap-2">
           <span>&copy; 2026</span>
           <span>&middot;</span>
           <a
             href="https://kanacle.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#8B7B6B", textDecoration: "none" }}
+            className="text-text-sub no-underline hover:text-text transition-colors"
           >
             kanacle.com
           </a>
