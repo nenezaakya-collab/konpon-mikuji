@@ -1,12 +1,12 @@
-const CACHE_NAME = "konpon-mikuji-v1";
+const CACHE_NAME = "konpon-mikuji-v2";
 const ASSETS = [
-  "/",
-  "/assets/top.png",
-  "/assets/daikichi.png",
-  "/assets/kichi.png",
-  "/assets/suekichi.png",
-  "/assets/kon-icon.png",
-  "/assets/pon-icon.png",
+  "/assets/top.webp",
+  "/assets/konpon-default.webp",
+  "/assets/daikichi.webp",
+  "/assets/kichi.webp",
+  "/assets/suekichi.webp",
+  "/assets/kon-icon.webp",
+  "/assets/pon-icon.webp",
 ];
 
 self.addEventListener("install", (event) => {
@@ -28,6 +28,12 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  // Don't cache navigation requests (HTML pages) — always fetch from network
+  if (event.request.mode === "navigate") {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cached) => {
       return cached || fetch(event.request);
